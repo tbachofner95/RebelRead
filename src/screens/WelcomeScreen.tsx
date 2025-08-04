@@ -1,23 +1,18 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, useColorScheme, View } from 'react-native';
-import { useNavigation, NavigationProp } from '@react-navigation/native'; // <-- import hook
-import { Colors } from '../constants/Colors'; // adjust path as needed
+import { useNavigation, NavigationProp } from '@react-navigation/native';
+import { Colors } from '../constants/Colors';
+import { RootStackParamList } from '../types';
 
-const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-type RootStackParamList = {
-  Welcome: undefined;
-  Question: undefined;
-  // add other routes here as needed
-};
 
 const WelcomeScreen = () => {
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>(); // <-- typed navigation
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const colorScheme = useColorScheme();
   const theme = Colors[colorScheme ?? 'light'];
 
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
-      <Text style={[styles.title, { color: theme.text }]}>Welcome to BlackList</Text>
+      <Text style={[styles.title, { color: theme.text }]}>Welcome to RebelRead</Text>
       <Text style={[styles.subtitle, { color: theme.muted }]}>
         Discover your next banned book.
       </Text>

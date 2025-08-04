@@ -1,4 +1,5 @@
-// App.js
+// App.tsx
+import 'react-native-gesture-handler';
 import React from 'react';
 import AppNavigator from './navigation/AppNavigator';
 

@@ -5,7 +5,6 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import WelcomeScreen from '@/screens/WelcomeScreen';
-import { useRouter } from 'expo-router';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 type RootStackParamList = {

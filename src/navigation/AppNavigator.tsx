@@ -1,4 +1,4 @@
-// AppNavigator.js
+// AppNavigator.tsx
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
