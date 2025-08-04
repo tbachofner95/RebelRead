@@ -32,10 +32,15 @@ function getTopCategory(answers: string[]): string {
 }
 
 function getBookRecommendation(category: string) {
-  if (category in BOOKS) {
-    return BOOKS[category as keyof typeof BOOKS];
+  const matchingBooks = BOOKS.filter(book => 
+    book.categories.includes(category)
+  );
+  
+  if (matchingBooks.length > 0) {
+    const randomIndex = Math.floor(Math.random() * matchingBooks.length);
+    return matchingBooks[randomIndex];
   }
-  return Object.values(BOOKS)[0];
+  return BOOKS[Math.floor(Math.random() * BOOKS.length)];
 }
 
 const ResultScreen = ({ route, navigation }: Props) => {
